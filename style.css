@@ -1,16 +1,30 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/heroImage.jpeg');
+    background: url('Images/heroimage.jpeg');
     background-size:cover;
     position:relative;
 }
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
+    display: inline-block;
+    position: relative;
+    margin: 32px auto;
+    transition: transform .2s; /* Animation */
+    color: white;
+}
+.hero_title:hover {
+    transform: scale(1.5);
 }
 .hero_desc {
     font-size: 2rem;
+    margin: 32px auto;
+    transition: transform .2s;
+    color: white;
+}
+.hero_desc:hover {
+    transform: scale(1.5);
 }
 .hero-text {
     text-align: center;
@@ -20,7 +34,6 @@
     transform: translate(-50%, -50%);
     color: white;
 }
-
 /* about section image css */
 .imageAboutPage {
     width: 100%;
@@ -48,4 +61,7 @@
 }
 #contact {
     padding-bottom: 4rem;
+}
+.navbarScroll.navbarDark {
+    background-color: black;
 }
