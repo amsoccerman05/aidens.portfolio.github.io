@@ -65,3 +65,21 @@
 .navbarScroll.navbarDark {
     background-color: black;
 }
+/* frc hero image */
+.frcimage {
+    height:100vh;
+    background: url('Images/frcheroimage.JPG');
+    background-size:cover;
+    position:relative;
+}
+.frc_title {
+    font-size: 4.5rem;
+    display: inline-block;
+    position: relative;
+    margin: 32px auto;
+    transition: transform .2s; /* Animation */
+    color: white;
+}
+.frc_title:hover {
+    transform: scale(1.5);
+}
