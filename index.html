@@ -23,6 +23,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <h1> Aiden Morrison</h1>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
@@ -37,6 +38,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <button class="burger-menu" id="burger-menu">
+                        <ion-icon class="bars" name="menu-outline"></ion-icon>
+                      </button>
                 </ul>
             </div>
         </div>
@@ -63,30 +67,21 @@
             </div>
 
             <div class="col-lg-8">
-                <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                    
+                <p> 
+                    I am a high school student who is motivated in computer science, mechanical engineering, and electrical engineering.
                 </p>
-                <div class="row mt-3">
-                    <div class="col-md-6">
+                <div class="row mt-3" class="p">
+                    <div class="p" class="text-bullet-centered">
                         <ul>
                             <li>Name: Aiden Morrison</li>
                             <li>Age: 17</li>
                             <li>Occupation: Student</li>
-
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul>
-                            <li>Name: Aiden Morrison</li>
-                            <li>Age: 17</li>
-                            <li>Occupation: Student</li>
-
                         </ul>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    <p>
+                        I currently take courses at my high school and the University of Colorado: Denver. I intend on graduating high school as honors in 2023. I love tinkering with my 3d printers and coding personal projects. I am a leader on my schools robotics teams where I strive to create robots that compete well. I do a large amount of political work and outreach regarding STEM to make an impact in my local
                     </p>
                 </div>
                 <div class="row mt-3">
@@ -131,7 +126,7 @@
 
             <div class="col-lg-4 mt-4">
                 <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/Images/SnipofSaber.png" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Lightsaber Design</h4>
                         <p class="card-text">I designed and 3d printed a lightsaber as a final project. As part of this, I created over 25 drawings and an all encompassing dossier.</p>
@@ -145,52 +140,75 @@
 
         </div>
 </section>
-<!-- contact section-->
-<section id="contact">
-    <div class="container mt-3 contactContent">
-        <h1 class="text-center">Contact Me</h1>
-
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
-                    <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
-                        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Highlands+Ranch,+CO,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
-                        </iframe>
-                    </div>
-                    <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
-                    <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
-                    </style>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <!-- form fields -->
-                <form>
-                    <input type="text" class="form-control form-control-lg" placeholder="Name">
-                    <input type="email" class="form-control mt-3" placeholder="Email">
-                    <input type="text" class="form-control mt-3" placeholder="Subject">
-                    <div class="mb-3 mt-3">
-                        <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Description"></textarea>
-                    </div>
-                </form>
-                <button type="button" class="btn btn-success mt-3">Contact Me</button>
-                
-            </div>
-
-        </div>
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-form-container">
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xnqrerdg" method="POST">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="sender-name"
+              placeholder="Enter Your Name"
+              class="input-field"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="sender-email"
+              placeholder="Enter Your Email"
+              class="input-field"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              cols="60"
+              rows="10"
+              placeholder="Enter Your Message"
+              name="message"
+              class="input-field"
+              required
+            ></textarea>
+          </div>
+          <b>
+          <input
+            type="submit"
+            value="Submit"
+            id="submit-btn"
+            class="submit-btn"
+          />
+          </b>
+        </form>
+      </div>
     </div>
-</section>
+  </section>
 
- <!-- footer section-->
- <footer id="footer">
-    <div class="container-fluid">
-        <!-- social media icons -->
-        <div class="social-icons mt-4">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
-</footer>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/aiden-morrison-96a4a8218/" target="_blank"
+      ><img
+        src="/Images/linkedin.png"
+        alt="Linkedin"
+        loading="lazy"
+        class="socicon"
+    /></a>
+    <a href="https://github.com/amsoccerman05" target="_blank"
+      ><img src="/Images/github.png" alt="Github" class="socicon"
+    /></a>
+ </div>
+    <footer>
+        <p class="copy">
+          Built by Aiden Morrison
+          </a>
+        </p>
+  </footer>
+
 </html>
